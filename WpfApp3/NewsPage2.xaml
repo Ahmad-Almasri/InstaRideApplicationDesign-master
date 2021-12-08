@@ -1,0 +1,20 @@
+﻿<Page x:Class="WpfApp3.NewsPage2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="450"
+      Title="NewsPage2">
+
+    <Grid Background="#FF1861F1">
+        <StackPanel  x:Name="SP" Orientation="Horizontal" Background="#FF1861F1" Height="50" Width="450" HorizontalAlignment="Stretch" VerticalAlignment="top" Margin="0,0,0,0">
+            <TextBlock Text="&#129032;" FontSize="35px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,2,0,0" Cursor="Hand" MouseDown="backBtn"/>
+            <TextBlock Text="Notifications" FontSize="25px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,10,0,0"/>
+        </StackPanel>
+        <TextBlock FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="29" Margin="10,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430"><Run Text="Highway 11 in Abbotsford reopens to single-lane traffic"/><LineBreak/><Run/></TextBlock>
+        <TextBlock Foreground="White" FontSize="14" HorizontalAlignment="Left" Height="306" Margin="19,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404"><Run Text="Highway 11 between Hazelwood Avenue and Clayburn Road has reopened to passenger and emergency vehicles, restoring the highway connection between Abbotsford and Mission."/><LineBreak/><Run/><LineBreak/><Run Text="Traffic is moving in a single lane in each direction between Hazelwood and Clayburn using the southbound lanes of Highway 11. The northbound lanes remain closed until the highway can be repaired."/><LineBreak/><Run/><LineBreak/><Run Text="There will be no left turn onto Highway 11 from Valley Road."/><LineBreak/><Run/><LineBreak/><Run Text="This section of Highway 11 is limited to passenger vehicles only, plus emergency and municipal service vehicles. Drivers should obey all signage and traffic control. Delays can be expected."/></TextBlock>
+        <Image Margin="94,149,118.6,342.6" Source="27418470_web1_211210-MCR-Highway11-reopens-ds_1-768x512.jpg" Stretch="Fill"/>
+    </Grid>
+</Page>

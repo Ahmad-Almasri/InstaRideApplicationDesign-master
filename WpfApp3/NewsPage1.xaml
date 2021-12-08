@@ -1,0 +1,20 @@
+﻿<Page x:Class="WpfApp3.NewsPage1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="450"
+      Title="NewsPage1">
+
+    <Grid Background="#FF1861F1">
+        <StackPanel  x:Name="SP" Orientation="Horizontal" Background="#FF1861F1" Height="50" Width="450" HorizontalAlignment="Stretch" VerticalAlignment="top" Margin="0,0,0,0">
+            <TextBlock Text="&#129032;" FontSize="35px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,2,0,0" Cursor="Hand" MouseDown="backBtn"/>
+            <TextBlock Text="Notifications" FontSize="25px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,10,0,0"/>
+        </StackPanel>
+        <TextBlock FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="29" Margin="10,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430"><Run Text="Traffic snarled as truck catches fire on Highway 417"/><LineBreak/><Run/></TextBlock>
+        <Image Margin="89,147,110.6,339.6" Source="image.jpeg" Stretch="Fill"/>
+        <TextBlock Foreground="White" FontSize="14" HorizontalAlignment="Left" Height="306" Margin="19,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404"><Run Text="Ottawa Fire Services says no one was hurt after a propane truck caught fire on Highway 417 during the Tuesday morning rush, but it caused major delays for drivers."/><LineBreak/><Run/><LineBreak/><Run Text="Firefighters were called by the OPP to the westbound lanes of the highway near the Bronson exit at around 7:15 a.m."/><LineBreak/><Run/><LineBreak/><Run Text="OFS public information officer Nick DeFazio told CTV News Ottawa that the truck was fully engulfed when firefighters arrived. Overheated brakes caused the fire, DeFazio said."/><LineBreak/><Run Text="The westbound lanes of the highway were closed as a result of the fire, causing significant backups."/><LineBreak/><Run/><LineBreak/><Run Text="The blaze was out by 7:27 a.m."/><LineBreak/><Run Text="The highway fully reopened just after 9 a.m."/></TextBlock>
+    </Grid>
+</Page>

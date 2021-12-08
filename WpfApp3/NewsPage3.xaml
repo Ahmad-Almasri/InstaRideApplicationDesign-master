@@ -1,0 +1,20 @@
+﻿<Page x:Class="WpfApp3.NewsPage3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="450"
+      Title="NewsPage3">
+
+    <Grid Background="#FF1861F1">
+        <StackPanel  x:Name="SP" Orientation="Horizontal" Background="#FF1861F1" Height="50" Width="450" HorizontalAlignment="Stretch" VerticalAlignment="top" Margin="0,0,0,0">
+            <TextBlock Text="&#129032;" FontSize="35px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,2,0,0" Cursor="Hand" MouseDown="backBtn"/>
+            <TextBlock Text="Notifications" FontSize="25px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,10,0,0"/>
+        </StackPanel>
+        <TextBlock FontSize="18" Foreground="White" HorizontalAlignment="Left" Height="51" Margin="10,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="430"><Run Text="Power outage behind morning traffic backlogs west of downtown"/><LineBreak/><Run/></TextBlock>
+        <TextBlock Foreground="White" FontSize="10" HorizontalAlignment="Left" Height="306" Margin="19,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="404"><Run Text="EDMONTON - A power outage in the neighbourhoods surrounding Groat Road lasted past noon on Tuesday, leaving some residents and businesses without power for hours and putting to sleep the area's traffic lights."/><LineBreak/><Run Text="The Glenora, Inglewood, McQueen, North Glenora, Oliver, Westmount and Woodcroft neighbourhoods lost power around 8:10 a.m. About 4,300 customers were initially affected."/><LineBreak/><Run/><LineBreak/><Run Text="Traffic lights were out on 102 Avenue between 124 Street and 142 Street, and police said they were also out on 124 Street between 104 Avenue and 111 Avenue."/><LineBreak/><Run/><LineBreak/><Run Text="&quot;There is a collision at 107 Ave and 124 St. Drivers should avoid the area, as traffic remains disorganized,&quot; a police spokesperson said."/><LineBreak/><Run/><LineBreak/><Run Text="&quot;Motorists are reminded that when traffic lights are not functioning, they are to treat the intersection as a four-way stop and proceed with caution.&quot;"/><LineBreak/><Run/><LineBreak/><Run Text="EPCOR originally estimated service would be restored at 10 a.m. but later extended the timeframe. As of noon, crews had restored power to most of the customers. Power was still out in Glenora, where an estimated 150-some customers would be without power until 3 p.m. "/><LineBreak/><Run Text="A blown transformer at 135 Street and 102 Avenue damaged a power pole and cable there, causing the outage."/></TextBlock>
+        <Image Margin="118,144,86.6,333.6" Source="blown-transformer-1-5697394-1638907911502.jpg" Stretch="Fill"/>
+    </Grid>
+</Page>

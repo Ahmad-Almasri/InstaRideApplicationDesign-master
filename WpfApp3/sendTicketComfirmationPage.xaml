@@ -1,0 +1,24 @@
+﻿<Page x:Class="WpfApp3.sendTicketComfirmationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="450"
+      Title="sendTicketComfirmationPage">
+
+    <Grid Background="#FF1861F1">
+        <TextBlock Text="&#129032;" FontSize="35px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="34,24,383.6,0" Cursor="Hand" MouseDown="btnBack" RenderTransformOrigin="0.321,1.103"/>
+        <TextBlock HorizontalAlignment="Center" Height="53" Margin="109,17,87.6,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" FontSize="35" Foreground="White"><Run Text=" "/><Run Text="Send Ticket"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="77" Margin="52,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="335" FontSize="18" Foreground="White"><Run Text="Enter the"/><Run Text=" following"/><Run Text=" code in the redeem tickets section in another device to redeem your ticket."/></TextBlock>
+        <TextBlock x:Name="codeTB" HorizontalAlignment="Left" Height="30" Margin="84,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" FontSize="20" Text="Press Here to Generate Code" MouseDown="generateCode"/>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="196,320,0,0" TextWrapping="Wrap" Text="or" VerticalAlignment="Top" Width="36" FontSize="18" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="64" Margin="52,368,0,0" TextWrapping="Wrap" Text="If they are registered, enter their email or phone number:" VerticalAlignment="Top" Width="335" FontSize="18" Foreground="White"/>
+
+        <Border Background="#fff" CornerRadius="10" Margin="34,437,26.6,148.6">
+            <TextBox  Height="28" BorderThickness="0,0,0,0" BorderBrush="White" FontSize="20" Padding="0" Background="Transparent" Foreground="#000" Margin="10,0,0,0"  Name="cardNumberTB"/>
+        </Border>
+        <Button Content="Done" HorizontalAlignment="Left" Height="55" Margin="58,549,0,0" VerticalAlignment="Top" Width="329" Click="Button_Click"/>
+    </Grid>
+</Page>

@@ -1,0 +1,34 @@
+﻿<Page x:Class="WpfApp3.RedeemTicket"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="450"
+      Title="RedeemTicket">
+
+    <Grid Background="#FF1861F1">
+        <TextBlock Text="&#129032;" FontSize="35px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30,10,387.6,0" Cursor="Hand" MouseDown="btnBack" RenderTransformOrigin="0.321,1.103"/>
+        <TextBlock Text="Redeem Ticket" FontSize="35px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="106,10,100.6,0" Cursor="Hand"/>
+
+        <Border Background="#FF1C54C2" Height="450" Width="420" Margin="0,70,0,0" CornerRadius="25">
+            <StackPanel>
+                <TextBlock  Height="28" Text="Enter code to redeem ticket : " FontSize="20" Padding="0" Background="Transparent" Foreground="#FFF" Margin="30,70,0,0" />
+                <Border Background="#FFF" CornerRadius="10" Height="50px" Margin="30,5,29.6,0">
+                    <TextBox  Height="28" BorderThickness="0,0,0,0" BorderBrush="White" FontSize="20" Padding="0" Background="Transparent" Foreground="#000" Margin="10,0,0,0"  x:Name="CodeTB"/>
+                </Border>
+                <Button Content="Redeem" Height="49" Margin="150,30,120,0" BorderThickness="1" BorderBrush="#FFF" Foreground="#FFF" Background="#FF1C54C2" FontSize="18" Click="goRedeem"/>
+                <TextBlock  Height="28" Text="                                  Or : " FontSize="20" Padding="0" Background="Transparent" Foreground="#FFF" Margin="30, 30,-0.4,0" />
+                <Button Content="Scan code" Height="49" Margin="150,30,120,0" BorderThickness="1" BorderBrush="#FFF" Foreground="#FFF" Background="#FF1C54C2" FontSize="18"/>
+            </StackPanel>
+        </Border>
+
+        <StackPanel  x:Name="SP3" Background="#FF1C54C2" Height="45" Width="450" HorizontalAlignment="Stretch" VerticalAlignment="top" Margin="0,62,-0.4,0" MouseDown="ActiveTicketDown">
+            <TextBlock Text="1 Active Ticket" FontSize="15px" FontWeight="Bold" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
+            <TextBlock x:Name="TBPress" Text="Press here to see more details" FontSize="10px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0"/>
+            <Button Content="Open Wallet" Height="30px" Width="100px" Margin="0,400,0,0" BorderThickness="1" BorderBrush="#FFF" Foreground="#FFF" Background="#FF1C54C2"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

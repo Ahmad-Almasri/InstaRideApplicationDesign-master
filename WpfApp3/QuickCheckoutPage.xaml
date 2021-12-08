@@ -1,0 +1,45 @@
+﻿<Page x:Class="WpfApp3.QuickCheckoutPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="450"
+      Title="QuickCheckoutPage">
+
+    <Grid Background="#FF1861F1">
+        <TextBlock Text="&#129032;" FontSize="35px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30,10,387.6,0" Cursor="Hand" MouseDown="btnBack" RenderTransformOrigin="0.321,1.103"/>
+        <TextBlock FontSize="35px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="95,10,48.6,0" Cursor="Hand" Width="306"><Run Text=" "/><Run Text="Quick Checkout"/></TextBlock>
+        <Button Content="Pay with Apple pay" HorizontalAlignment="Left" Margin="95,523,0,58.6" Width="266" Click="Button_Click" />
+        <Rectangle Fill="#FFF4F4F5" Margin="377,171,32.6,430.6" Stroke="Black" Name="selectFirst" MouseDown="choseOptionOne"/>
+        <Rectangle Fill="#FFF4F4F5" Margin="377,299,32.6,302.6" Stroke="Black" Name="selectSecond" MouseDown="choseOptionTwo"/>
+        <Rectangle Fill="#FFF4F4F5" Margin="377,425,32.6,176.6" Stroke="Black" Name="selectThird" MouseDown="choseOptionThree"/>
+
+        <StackPanel Name="sp1">
+
+            <Border Background="#FF1C54C2" Height="80" Margin="15,150,95.6,361.667" CornerRadius="25">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="1 Adult ticket" Foreground="White" FontSize="15px" FontWeight="Bold" Margin="40,15,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border Background="#FF1C54C2" Height="80" Margin="15,-550,95.6,0" CornerRadius="25">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="1 Youth ticket" Foreground="#FFF" FontSize="15px" FontWeight="Bold" Margin="40,15,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border Background="#FF1C54C2" Height="80" Margin="15,-300,95.6,0" CornerRadius="25">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="1 Senior ticket" Foreground="#FFF" FontSize="15px" FontWeight="Bold" Margin="40,15,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+        </StackPanel>
+    </Grid>
+</Page>
