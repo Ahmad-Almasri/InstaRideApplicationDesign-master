@@ -23,6 +23,16 @@ namespace WpfApp3
         public PurchaseTicketsPage()
         {
             InitializeComponent();
+            if (Status.x == 0) // we have no active tickets
+            {
+                atTextBox.Text = Status.x + " Active Ticket";
+
+            }
+            else if (Status.x == 1)
+            { // we have 1 active ticket
+                atTextBox.Text = Status.x + " Active Ticket";
+                firstTicket.Visibility = Visibility.Visible;
+            }
         }
 
         private void ActiveTicketDown(object sender, MouseButtonEventArgs e)
@@ -31,11 +41,13 @@ namespace WpfApp3
             {
                 SP3.Height += 440;
                 TBPress.Visibility = Visibility.Hidden;
+                cost.Visibility = Visibility.Visible;
             }
             else
             {
                 SP3.Height -= 440;
                 TBPress.Visibility = Visibility.Visible;
+                cost.Visibility = Visibility.Hidden;
             }
         }
 
@@ -118,6 +130,7 @@ namespace WpfApp3
             theIntegerValue += 1;
             string theFinalValue = theIntegerValue.ToString();
             value.Text = theFinalValue;
+            cost.Text = "Cost 3.30$";
         }
         private void reduceAmount(object sender, RoutedEventArgs e)
         {
@@ -214,6 +227,13 @@ namespace WpfApp3
                 theIntegerValue -= 1;
             string theFinalValue = theIntegerValue.ToString();
             dailySenior.Text = theFinalValue;
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            var nav = NavigationService.GetNavigationService(this);
+
+            nav.Navigate(new WalletPage());
         }
     }
 }

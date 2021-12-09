@@ -14,20 +14,20 @@
             <TextBlock Text="&#129032;" FontSize="35px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,2,0,0" Cursor="Hand" MouseDown="backBtn"/>
             <TextBlock Text="Settings" FontSize="25px" FontFamily="Microsoft JhengHei" Foreground="#FFF" Margin="110,10,0,-0.4"/>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" Height="41" Margin="35,83,0,0" TextWrapping="Wrap" Text="Prefrences" VerticalAlignment="Top" Width="100" FontSize="18" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,129,0,0" TextWrapping="Wrap" Text="Theme" VerticalAlignment="Top" Width="100" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,178,0,0" TextWrapping="Wrap" Text="Font size" VerticalAlignment="Top" Width="100" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,228,0,0" TextWrapping="Wrap" Text="Unit of Measurment" VerticalAlignment="Top" Width="130" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,277,0,0" TextWrapping="Wrap" Text="Language" VerticalAlignment="Top" Width="100" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Height="41" Margin="35,340,0,0" TextWrapping="Wrap" Text="App Information" VerticalAlignment="Top" Width="153" FontSize="18" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,411,0,0" TextWrapping="Wrap" Text="Terms of Service" VerticalAlignment="Top" Width="100" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,471,0,0" TextWrapping="Wrap" Text="Privacy Policy" VerticalAlignment="Top" Width="100" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,528,0,0" TextWrapping="Wrap" Text="Service Update" VerticalAlignment="Top" Width="100" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Height="41" Margin="35,83,0,0" TextWrapping="Wrap" Text="Prefrences" VerticalAlignment="Top" Width="100" FontSize="18" FontWeight="Bold" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,129,0,0" TextWrapping="Wrap" Text="Theme" VerticalAlignment="Top" Width="100" FontSize="14" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,178,0,0" TextWrapping="Wrap" Text="Font size" VerticalAlignment="Top" Width="100" FontSize="14" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,228,0,0" TextWrapping="Wrap" Text="Unit of Measurment" VerticalAlignment="Top" Width="130" FontSize="14" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,277,0,0" TextWrapping="Wrap" Text="Language" VerticalAlignment="Top" Width="100" FontSize="14" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="41" Margin="35,340,0,0" TextWrapping="Wrap" Text="App Information" VerticalAlignment="Top" Width="153" FontSize="18" FontWeight="Bold" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,411,0,0" TextWrapping="Wrap" Text="Terms of Service" VerticalAlignment="Top" Width="100" FontSize="14" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,471,0,0" TextWrapping="Wrap" Text="Privacy Policy" VerticalAlignment="Top" Width="100" FontSize="14" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="35,528,0,0" TextWrapping="Wrap" Text="Service Update" VerticalAlignment="Top" Width="100" FontSize="14" Foreground="White"/>
 
         <StackPanel>
-        <ComboBox x:Name="comboBoxThemes"  Margin="345,129,9.6,502.6" FontSize="10" BorderThickness="0">
-            <ComboBoxItem Content="Dark" IsSelected="True"/>
-        </ComboBox>
+            <ComboBox x:Name="comboBoxThemes"  Margin="345,129,9.6,502.6" FontSize="10" BorderThickness="0">
+                <ComboBoxItem Content="Dark" IsSelected="True"/>
+            </ComboBox>
         </StackPanel>
 
         <StackPanel>
@@ -47,6 +47,6 @@
                 <ComboBoxItem Content="English" IsSelected="True"/>
             </ComboBox>
         </StackPanel>
-        
+
     </Grid>
 </Page>

@@ -16,23 +16,14 @@ using System.Windows.Shapes;
 namespace WpfApp3
 {
     /// <summary>
-    /// Interaction logic for AddFundsPage.xaml
+    /// Interaction logic for WalletPage.xaml
     /// </summary>
-    public partial class AddFundsPage : Page
+    public partial class TripsPage : Page
     {
-        public AddFundsPage()
+        public TripsPage()
         {
             InitializeComponent();
-            if (Status.x == 0) // we have no active tickets
-            {
-                atTextBox.Text = Status.x + " Active Ticket";
-
-            }
-            else if (Status.x == 1)
-            { // we have 1 active ticket
-                atTextBox.Text = Status.x + " Active Ticket";
-                firstTicket.Visibility = Visibility.Visible;
-            }
+           
         }
 
         private void ActiveTicketDown(object sender, MouseButtonEventArgs e)
@@ -49,25 +40,32 @@ namespace WpfApp3
             }
         }
 
-        private void backBtn(object sender, MouseButtonEventArgs e)
+        private void sendTicketBtn(object sender, RoutedEventArgs e)
         {
             var nav = NavigationService.GetNavigationService(this);
 
-            nav.Navigate(new WalletPage());
+            nav.Navigate(new SendTicketPage());
         }
 
-        private void paymentBtnRevised(object sender, MouseButtonEventArgs e)
+        private void historyBtn(object sender, RoutedEventArgs e)
         {
             var nav = NavigationService.GetNavigationService(this);
 
-            nav.Navigate(new PaymentOptionsPageRevised());
+            nav.Navigate(new HistoryPage());
         }
 
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void btnBack(object sender, MouseButtonEventArgs e)
         {
             var nav = NavigationService.GetNavigationService(this);
 
-            nav.Navigate(new WalletPage());
+            nav.Navigate(new MainOptionsPage());
+        }
+
+        private void addFundsBtn(object sender, RoutedEventArgs e)
+        {
+            var nav = NavigationService.GetNavigationService(this);
+
+            nav.Navigate(new AddFundsPage());
         }
     }
 }

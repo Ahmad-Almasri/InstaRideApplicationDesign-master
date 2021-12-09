@@ -83,9 +83,27 @@
         <Button Content="Continue to Payment" Width="300" Height="50"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,100" Background="#FF1861F1" Foreground="#FFF" FontSize="20px" BorderThickness="1" BorderBrush="#FFF" Click="paymentBtn"/>
 
         <StackPanel  x:Name="SP3" Visibility="Visible" Background="#FF1C54C2" Height="45" Width="450" HorizontalAlignment="Stretch" VerticalAlignment="top" Margin="0,60,0,0" MouseDown="ActiveTicketDown">
-            <TextBlock Text="2 Active Tickets" FontSize="15px" FontWeight="Bold" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
+            <TextBlock Name="atTextBox" FontSize="15px" FontWeight="Bold" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"><Run Text="0"/><Run Text=" Active Tickets"/></TextBlock>
             <TextBlock x:Name="TBPress" Text="Press here to see more details" FontSize="10px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0"/>
-            <Button Content="Open Wallet" Height="30px" Width="100px" Margin="0,400,0,0" BorderThickness="1" BorderBrush="#FFF" Foreground="#FFF" Background="#FF1C54C2"/>
+            <Border Background="White" Height="80" Width="420" Margin="5,20,5,361.667" CornerRadius="25" Name="firstTicket" Visibility="Hidden">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Ticket Title" Foreground="#FF1861F1" FontSize="15px" FontWeight="Bold" Margin="40,15,0,0"/>
+                        <TextBlock Text="Activated"  FontSize="15px" FontWeight="Bold" Margin="190,15,0,0" Background="White" Foreground="#FF1C54C2" Padding="5"/>
+                    </StackPanel>
+                    <TextBlock Text="Expires In: 35 mins" Foreground="#FF1861F1" FontSize="12px" FontWeight="Bold" Margin="40,10,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Background="White" Height="80" Width="420" Margin="5,-310,5,361.667" CornerRadius="25" Name="secondTicket" Visibility="Hidden">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Ticket Title" Foreground="#FF1861F1" FontSize="15px" FontWeight="Bold" Margin="40,15,0,0"/>
+                        <TextBlock Text="Activated"  FontSize="15px" FontWeight="Bold" Margin="190,15,0,0" Background="White" Foreground="#FF1C54C2" Padding="5"/>
+                    </StackPanel>
+                    <TextBlock Text="Expires In: 35 mins" Foreground="#FF1861F1" FontSize="12px" FontWeight="Bold" Margin="40,10,0,0"/>
+                </StackPanel>
+            </Border>
+            <Button Content="Open Wallet" Height="30px" Width="100px" Margin="0,-350,0,0" BorderThickness="1" BorderBrush="#FFF" Foreground="#FFF" Background="#FF1C54C2" Click="Button_Click_5"/>
         </StackPanel>
 
 
@@ -93,6 +111,7 @@
             <TextBlock Text="&#129032;" FontSize="35px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20,2,0,0" Cursor="Hand" MouseDown="backBtn"/>
             <TextBlock Text="Purchase Ticket" FontSize="25px" FontFamily="Microsoft JhengHei" Foreground="#FFF"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="80,10,0,0"/>
         </StackPanel>
+        <TextBlock x:Name="cost" Text="Cost $0" FontSize="25px" FontFamily="Microsoft JhengHei" Foreground="#FF1861F1" Background="#FFF"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="176,124,0,0" Padding="2" Height="33" />
 
     </Grid>
 </Page>

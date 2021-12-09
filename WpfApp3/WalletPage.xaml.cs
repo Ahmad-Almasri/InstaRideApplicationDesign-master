@@ -23,6 +23,21 @@ namespace WpfApp3
         public WalletPage()
         {
             InitializeComponent();
+
+            if (Status.x == 1)
+            {
+                ticTitle.Text = "Activated Ticket";
+                btnAct.Visibility = Visibility.Hidden;
+                atTextBox.Text = "1 Active Ticket";
+            }
+
+            if (Status.x == 0) {
+                ticket1.Visibility = Visibility.Hidden;
+            }
+
+            if (Status.y == -1) {
+                ticket1.Visibility = Visibility.Visible; 
+            }
         }
 
         private void ActiveTicketDown(object sender, MouseButtonEventArgs e)
@@ -66,5 +81,16 @@ namespace WpfApp3
 
             nav.Navigate(new AddFundsPage());
         }
+
+        private void Act(object sender, RoutedEventArgs e)
+        {
+            // Status.ticket1Status = 1;
+            Status.x = 1;
+            var nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new MainOptionsPage());
+        }
+        
+
+
     }
 }

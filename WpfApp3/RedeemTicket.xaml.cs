@@ -23,6 +23,16 @@ namespace WpfApp3
         public RedeemTicket()
         {
             InitializeComponent();
+            if (Status.x == 0) // we have no active tickets
+            {
+                atTextBox.Text = Status.x + " Active Ticket";
+
+            }
+            else if (Status.x == 1)
+            { // we have 1 active ticket
+                atTextBox.Text = Status.x + " Active Ticket";
+                firstTicket.Visibility = Visibility.Visible;
+            }
         }
 
         private void btnBack(object sender, MouseButtonEventArgs e)
@@ -49,6 +59,7 @@ namespace WpfApp3
         WalletPage newWindow = new WalletPage();
         private void goRedeem(object sender, RoutedEventArgs e)
         {
+            
             var nav = NavigationService.GetNavigationService(this);
             string theInputCode = CodeTB.Text;
             if(theInputCode.Length == 10)
@@ -78,6 +89,21 @@ namespace WpfApp3
                 newWindow.sp1.Children.Add(myBorder1);
             }
 
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            var nav = NavigationService.GetNavigationService(this);
+
+            nav.Navigate(new WalletPage());
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+
+            var nav = NavigationService.GetNavigationService(this);
+            Status.y = -1;
+            nav.Navigate(new WalletPage());
         }
     }
 }

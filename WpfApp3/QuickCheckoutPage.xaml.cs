@@ -104,7 +104,12 @@ namespace WpfApp3
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var nav = NavigationService.GetNavigationService(this);
-
+            // Status.ticket2Status = 1;
+            // Status.ticketTwoInBarStatus = 1;
+            Status.x = 1;
+            nav.Navigate(new WalletPage());
+            /*
+            Status.x = 1;
             nav.Navigate(newWindow);
 
             if(temp == 1)
@@ -114,7 +119,7 @@ namespace WpfApp3
                 myBorder1.Width = 420;
                 Thickness margin = myBorder1.Margin;
                 margin.Left = 5;
-                margin.Top = -400;
+                margin.Top = 20;
                 margin.Right = 5;
                 margin.Bottom = 0;
                 myBorder1.Margin = margin;
@@ -126,9 +131,9 @@ namespace WpfApp3
                 TextBlock txt1 = new TextBlock();
                 txt1.Foreground = Brushes.White;
                 txt1.FontSize = 15;
-                txt1.Text = "              1 Adult Ticket \n " +
+                txt1.Text = "       1 Adult Ticket \n " +
                     "                                                                            Activated \n" +
-                    "            Expires in : 2 hours ";
+                    "        Expires in : 2 hours ";
                 myBorder1.Child = txt1;
                 newWindow.sp1.Children.Add(myBorder1);
             }
@@ -139,7 +144,7 @@ namespace WpfApp3
                 myBorder1.Width = 420;
                 Thickness margin = myBorder1.Margin;
                 margin.Left = 5;
-                margin.Top = -400;
+                margin.Top = 20;
                 margin.Right = 5;
                 margin.Bottom = 0;
                 myBorder1.Margin = margin;
@@ -151,37 +156,39 @@ namespace WpfApp3
                 TextBlock txt1 = new TextBlock();
                 txt1.Foreground = Brushes.White;
                 txt1.FontSize = 15;
-                txt1.Text = "              1 Youth Ticket \n " +
+                txt1.Text = "       1 Youth Ticket \n " +
                     "                                                                            Activated \n" +
-                    "            Expires in : 2 hours ";
+                    "        Expires in : 2 hours ";
                 myBorder1.Child = txt1;
                 newWindow.sp1.Children.Add(myBorder1);
             }
             else if(temp3 == 1)
             {
+                Status.ticket2Status = 1;
+                Status.ticketTwoInBarStatus = 1;
                 Border myBorder1 = new Border();
                 myBorder1.Height = 80;
                 myBorder1.Width = 420;
                 Thickness margin = myBorder1.Margin;
                 margin.Left = 5;
-                margin.Top = -400;
+                margin.Top = 20;
                 margin.Right = 5;
                 margin.Bottom = 0;
                 myBorder1.Margin = margin;
-                var bc = new BrushConverter();
-
-                myBorder1.Background = (Brush)bc.ConvertFrom("#FF1C54C2");
+                myBorder1.Background = Brushes.White;
                 myBorder1.BorderThickness = new Thickness(1);
                 myBorder1.CornerRadius = new CornerRadius(25);
                 TextBlock txt1 = new TextBlock();
-                txt1.Foreground = Brushes.White;
+                txt1.Foreground = Brushes.Blue;
                 txt1.FontSize = 15;
-                txt1.Text = "              1 Senior Ticket \n " +
+                txt1.Text = "       1 Senior Ticket \n " +
                     "                                                                            Activated \n" +
-                    "            Expires in : 2 hours ";
+                    "        Expires in : 2 hours ";
                 myBorder1.Child = txt1;
                 newWindow.sp1.Children.Add(myBorder1);
             }
+        }
+            */
         }
     }
 }

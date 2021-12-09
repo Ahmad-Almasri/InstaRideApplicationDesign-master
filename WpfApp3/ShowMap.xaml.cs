@@ -13,30 +13,32 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
 namespace WpfApp3
 {
     /// <summary>
-    /// Interaction logic for PayWithFunds.xaml
+    /// Interaction logic for ShowMap.xaml
     /// </summary>
-    public partial class PayWithFunds : Page
+    public partial class ShowMap : Page
     {
-        public PayWithFunds()
+
+        public ShowMap(string startLocation, string endLocation, string url)
         {
             InitializeComponent();
-        }
-
-        private void goPay(object sender, RoutedEventArgs e)
-        {
-            var nav = NavigationService.GetNavigationService(this);
-            Status.ticket1Status = -1;
-            nav.Navigate(new ConfirmationOfPurchase());
+            txtStartLocation.Text = startLocation;
+            txtEndLocation.Text = endLocation;
+            browser.Navigate(url);
 
         }
-        private void btnBack(object sender, MouseButtonEventArgs e)
+
+        private void backBtn(object sender, MouseButtonEventArgs e)
         {
             var nav = NavigationService.GetNavigationService(this);
 
-            nav.Navigate(new PaymentOptionsPage());
+            nav.Navigate(new MapPage());
         }
     }
+
+
 }

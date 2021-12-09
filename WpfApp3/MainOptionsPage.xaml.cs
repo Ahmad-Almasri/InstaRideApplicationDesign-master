@@ -24,6 +24,14 @@ namespace WpfApp3
         public MainOptionsPage()
         {
             InitializeComponent();
+            if (Status.x == 0) // we have no active tickets
+            {
+                atTextBox.Text = Status.x + " Active Ticket";
+        
+            }else if (Status.x == 1) { // we have 1 active ticket
+                atTextBox.Text = Status.x+" Active Ticket";
+                firstTicket.Visibility = Visibility.Visible;
+            }
         }
 
         private void LeftEnter(object sender, MouseEventArgs e)
@@ -171,11 +179,39 @@ namespace WpfApp3
             nav.Navigate(new NewsPage4());
         }
 
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            var nav = NavigationService.GetNavigationService(this);
+
+            nav.Navigate(new WalletPage());
+        }
+
         private void gotoQC(object sender, MouseButtonEventArgs e)
         {
             var nav = NavigationService.GetNavigationService(this);
 
             nav.Navigate(new QuickCheckoutPage());
+        }
+
+        private void viewmap(object sender, RoutedEventArgs e)
+        {
+            var nav = NavigationService.GetNavigationService(this);
+
+            nav.Navigate(new MapPage());
+        }
+
+        private void accBtn(object sender, RoutedEventArgs e)
+        {
+            var nav = NavigationService.GetNavigationService(this);
+
+            nav.Navigate(new BookTripPage());
+        }
+
+        private void tripBtn(object sender, RoutedEventArgs e)
+        {
+            var nav = NavigationService.GetNavigationService(this);
+
+            nav.Navigate(new TripsPage());
         }
     }
 }

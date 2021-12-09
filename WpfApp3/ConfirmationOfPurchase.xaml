@@ -9,10 +9,10 @@
       Title="ConfirmationOfPurchase">
 
     <Grid Background="#FF1861F1">
-        <TextBlock HorizontalAlignment="Center" Margin="135,293,128.6,291.6" TextWrapping="Wrap" VerticalAlignment="Center" Height="65" Width="186" FontSize="20" Foreground="White"><Run Text="  "/><Run Text="   "/><Run Text="  "/><LineBreak/><Run Text="     "/><Run Text="Confirmed"/></TextBlock>
-        <Image Margin="137,141,126.6,385.6" Source="480px-White_check.svg.png" Stretch="Fill"/>
-        <TextBlock HorizontalAlignment="Left" Margin="112,382,0,0" TextWrapping="Wrap" Text="Your purchase has been confirmed and completed." VerticalAlignment="Top" Height="53" Width="327" FontSize="18" Foreground="White"/>
-        <Button Content="Go to Wallet" HorizontalAlignment="Left" Height="54" Margin="115,484,0,0" VerticalAlignment="Top" Width="236" Background="#FF1C54C2" FontSize="18" FontWeight="DemiBold" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Center" Margin="135,296,128.778,288.778" TextWrapping="Wrap" VerticalAlignment="Center" Height="65" Width="186" FontSize="20" Foreground="White"><Run Text="  "/><Run Text="   "/><Run Text="  "/><LineBreak/><Run Text="     "/><Run Text="Confirmed"/></TextBlock>
+        <Image Margin="135,141,128.778,385.778" Source="480px-White_check.svg.png" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,382,0,0" TextWrapping="Wrap" Text="Your purchase has been confirmed and completed." VerticalAlignment="Top" Height="53" Width="327" FontSize="18" Foreground="White"/>
+        <Button Content="Go to Wallet" HorizontalAlignment="Left" Height="54" Margin="103,484,0,0" VerticalAlignment="Top" Width="236" Background="#FF1C54C2" FontSize="18" FontWeight="DemiBold" Click="Button_Click"/>
 
     </Grid>
 </Page>

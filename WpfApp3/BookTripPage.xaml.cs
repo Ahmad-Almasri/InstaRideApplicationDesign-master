@@ -18,31 +18,58 @@ namespace WpfApp3
     /// <summary>
     /// Interaction logic for SignUpPage.xaml
     /// </summary>
-    public partial class SignUpPage : Page
+    public partial class BookTripPage : Page
     {
-        public SignUpPage()
+        public BookTripPage()
         {
             InitializeComponent();
             addDayToComboBox();
             addMonthToComboBox();
-            addYearToCmboBox();
-            if (Status.x == 0) // we have no active tickets
-            {
-                atTextBox.Text = Status.x + " Active Ticket";
-
-            }
-            else if (Status.x == 1)
-            { // we have 1 active ticket
-                atTextBox.Text = Status.x + " Active Ticket";
-                firstTicket.Visibility = Visibility.Visible;
-            }
+            addTimeToCmboBox();
         }
 
-        private void addYearToCmboBox()
+        private void addTimeToCmboBox()
         {
-            for (int i = 2004; i >= 1950; i--)
+            int noon = 12;
+
+            for (int i = 1; i < 24; i++)
             {
-                comboBoxYears.Items.Add(i);
+                for (int j = 0; j < 60; j += 10)
+                {
+
+                    if (i < 12)
+                    {
+                        if (j < 10)
+                        {
+                            comboBoxTime.Items.Add(i.ToString() + ":" + "0" + j.ToString() + " AM");
+                        }
+                        else
+                        {
+                            comboBoxTime.Items.Add(i.ToString() + ":" + j.ToString() + " AM");
+                        }
+                    }
+                    else
+                    {
+                        if (j < 10)
+                        {
+                            comboBoxTime.Items.Add(noon.ToString() + ":" + "0" + j.ToString() + " PM");
+                        }
+                        else
+                        {
+                            comboBoxTime.Items.Add(noon.ToString() + ":" + j.ToString() + " PM");
+                        }
+                    }
+                }
+
+                if (i >= 12)
+                {
+                    noon++;
+                }
+
+                if (noon == 13)
+                {
+                    noon = 1;
+                }
             }
         }
 
@@ -64,7 +91,7 @@ namespace WpfApp3
             }
         }
 
-        
+
 
         private void ActiveTicketDown(object sender, MouseButtonEventArgs e)
         {
@@ -87,16 +114,11 @@ namespace WpfApp3
             nav.Navigate(new MainOptionsPage());
         }
 
-        private void comboBoxMonths_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void bookTripBtn(object sender, RoutedEventArgs e)
         {
             var nav = NavigationService.GetNavigationService(this);
 
-            nav.Navigate(new WalletPage());
+            nav.Navigate(new TripsPage());
         }
     }
 }

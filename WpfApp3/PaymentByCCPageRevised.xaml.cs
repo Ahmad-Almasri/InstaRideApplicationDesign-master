@@ -25,6 +25,19 @@ namespace WpfApp3
         public PaymentByCCPageRevised()
         {
             InitializeComponent();
+            if (Status.ticketInBarStatus == 1)
+            {
+                atTextBox.Text = "1 Active ticket";
+                firstTicket.Visibility = Visibility.Visible;
+            }
+            if (Status.ticketTwoInBarStatus == 1)
+            {
+                secondTicket.Visibility = Visibility.Visible;
+            }
+            if (Status.ticketInBarStatus == 1 && Status.ticketTwoInBarStatus == 1)
+            {
+                atTextBox.Text = "2 Active tickets";
+            }
         }
 
 
@@ -69,6 +82,12 @@ namespace WpfApp3
 
             if (emailTextBox.Length >= 11 && cardNumberTextBox.Length == 16 && monthYearTextBox.Length == 4 && ccvTextBox.Length == 3)
                 nav.Navigate(new ConfirmationButtonRevised());
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            var nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new WalletPage());
         }
     }
 }

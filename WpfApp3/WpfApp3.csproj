@@ -64,6 +64,9 @@
     <Compile Include="AddOptionsPage.xaml.cs">
       <DependentUpon>AddOptionsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BookTripPage.xaml.cs">
+      <DependentUpon>BookTripPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CCBtnRevised.xaml.cs">
       <DependentUpon>CCBtnRevised.xaml</DependentUpon>
     </Compile>
@@ -78,6 +81,9 @@
     </Compile>
     <Compile Include="MainOptionsPage.xaml.cs">
       <DependentUpon>MainOptionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MapPage.xaml.cs">
+      <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="NewsPage1.xaml.cs">
       <DependentUpon>NewsPage1.xaml</DependentUpon>
@@ -127,11 +133,18 @@
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ShowMap.xaml.cs">
+      <DependentUpon>ShowMap.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SignUpPage.xaml.cs">
       <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="specialTicket.xaml.cs">
       <DependentUpon>specialTicket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Status.cs" />
+    <Compile Include="TripsPage.xaml.cs">
+      <DependentUpon>TripsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WalletPage.xaml.cs">
       <DependentUpon>WalletPage.xaml</DependentUpon>
@@ -144,6 +157,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddOptionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BookTripPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,6 +196,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="NewsPage1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -243,11 +264,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ShowMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SignUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="specialTicket.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TripsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

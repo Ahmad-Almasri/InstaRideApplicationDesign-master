@@ -23,6 +23,16 @@ namespace WpfApp3
         public AddOptionsPage()
         {
             InitializeComponent();
+            if (Status.x == 0) // we have no active tickets
+            {
+                atTextBox.Text = Status.x + " Active Ticket";
+
+            }
+            else if (Status.x == 1)
+            { // we have 1 active ticket
+                atTextBox.Text = Status.x + " Active Ticket";
+                firstTicket.Visibility = Visibility.Visible;
+            }
         }
 
         private void ActiveTicketDown(object sender, MouseButtonEventArgs e)
@@ -58,6 +68,13 @@ namespace WpfApp3
             var nav = NavigationService.GetNavigationService(this);
 
             nav.Navigate(new RedeemTicket());
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            var nav = NavigationService.GetNavigationService(this);
+
+            nav.Navigate(new WalletPage());
         }
     }
 }
